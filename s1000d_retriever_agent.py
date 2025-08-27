@@ -13,6 +13,7 @@ from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langgraph.graph import StateGraph, END
 from lxml import etree
 from dotenv import load_dotenv
+import streamlit as st
 
 # ================================================================
 # --- Global Configuration and Dependencies ---
@@ -20,14 +21,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 CONFIG = {
-    "AZURE_OPENAI_API_KEY": os.getenv("AZURE_OPENAI_API_KEY"),
-    "AZURE_OPENAI_ENDPOINT": os.getenv("AZURE_OPENAI_ENDPOINT"),
-    "AZURE_OPENAI_API_VERSION": os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-01"),
-    "LLM_DEPLOYMENT_NAME": os.getenv("LLM_DEPLOYMENT_NAME", "gpt-4o-mini"),
-    "EMBEDDING_MODEL_DEPLOYMENT_NAME": os.getenv("EMBEDDING_MODEL_NAME", "text-embedding-ada-002"),
-    "PINECONE_API_KEY": os.getenv("PINECONE_API_KEY"),
-    "PINECONE_INDEX_NAME": os.getenv("PINECONE_INDEX_NAME", "medium-blogs-embedding1-1536"),
-    "PINECONE_ENVIRONMENT": os.getenv("PINECONE_ENVIRONMENT")
+    "AZURE_OPENAI_API_KEY": st.secrets.AZURE_OPENAI_API_KEY,
+    "AZURE_OPENAI_ENDPOINT": st.secrets.AZURE_OPENAI_ENDPOINT,
+    "AZURE_OPENAI_API_VERSION": st.secrets.AZURE_OPENAI_API_VERSION,
+    "LLM_DEPLOYMENT_NAME": st.secrets.LLM_DEPLOYMENT_NAME,
+    "EMBEDDING_MODEL_DEPLOYMENT_NAME": st.secrets.EMBEDDING_MODEL_NAME,
+    "PINECONE_API_KEY": st.secrets.PINECONE_API_KEY,
+    "PINECONE_INDEX_NAME": st.secrets.PINECONE_INDEX_NAME,
+    "PINECONE_ENVIRONMENT": st.secrets.PINECONE_ENVIRONMENT
 }
 
 
