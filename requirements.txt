@@ -9,7 +9,7 @@ fitz
 pypdf
 
 # Vector database client
-pinecone-client
+pinecone
 
 # XML processing
 lxml
@@ -18,4 +18,5 @@ lxml
 python-dotenv
 
 # Web framework (if you're using Streamlit for a UI)
+
 streamlit
