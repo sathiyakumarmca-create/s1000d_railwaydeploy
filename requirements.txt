@@ -1,0 +1,21 @@
+# Core LangChain and OpenAI dependencies
+langchain_openai
+langchain_core
+langgraph
+
+# PDF processing
+PyMuPDF
+fitz
+pypdf
+
+# Vector database client
+pinecone-client
+
+# XML processing
+lxml
+
+# Environment variables management
+python-dotenv
+
+# Web framework (if you're using Streamlit for a UI)
+streamlit
